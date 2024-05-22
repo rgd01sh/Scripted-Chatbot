@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+:root {
+  --primary-color: #ff85a2; /* Primary color for chat bubbles */
+  --secondary-color: #f6e5e53f; /* Secondary color for chat bubbles */
+  --user-color: #ff85a2; /* Color for user messages */
+  --bot-color: #6f6f6f; /* Color for bot messages */
+  --font-family: 'Roboto', sans-serif; /* Modern font family */
+  --font-size: 1.6rem; /* Font size for messages */
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f1efef; /* Background color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#custom-container {
+  width: 400px; /* Chat container width */
+  height: 550px;
+  margin: 50px auto; /* Adjusted margin for centering */
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: linear-gradient(to bottom right, #fceff3, #ffeff1); /* Gradient background */
+}
+
+.chat-header {
+  font-size: 2rem; /* Header font size */
+  font-weight: bold;
+  margin-bottom: 30px; /* Margin bottom for spacing */
+  padding: 20px;
+  background-color: var(--primary-color); /* Header background color */
+  color: #fff; /* Header text color */
+  border-top-left-radius: 20px; /* Rounded corners */
+  border-top-right-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.language-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.language-label {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.language-label:hover {
+  background-color: #d55773; /* Darker color on hover */
+}
+
+.chat-messages {
+  height: 240px; /* Chat history height */
+  overflow-y: scroll;
+  padding: 30px;
+  background-color: var(--secondary-color); /* Chat history background color */
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); /* Inset shadow */
+}
+
+
+
+.user-message {
+  background-color: #ffedf1; /* User message background color */
+  color: #ff85a2; /* User message text color */
+  border-radius: 20px; /* User message border radius */
+  padding: 40px 20px; /* User message padding */
+  margin: 10px 10px 10px 20px; /* User message margin */
+  align-self: flex-end; /* Align user message to right */
+  
+}
+
+.bot-message {
+  background-color: #ffeff1; /* Bot message background color */
+  color: #6f6f6f; /* Bot message text color */
+  border-radius: 20px; /* Bot message border radius */
+  padding: 15px 20px; /* Bot message padding */
+  margin: 10px 20px 10px 10px; /* Bot message margin */
+  align-self: flex-start; /* Align bot message to left */
+}
+
+
+#user-input {
+  width: calc(90% - 120px);
+  padding: 12px;
+  margin: 0 10px 20px 10px; /* Input field margin */
+  border: none;
+  border-radius: 10px; /* Input field border radius */
+  font-size: var(--font-size);
+  color: var(--primary-color); /* Input text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#send-btn {
+  width: 90px;
+  padding: 15px;
+  margin: 0 10px 20px 0; /* Button margin */
+  background-color: #ff8fa7;
+  color: #fff;
+  border: none;
+  border-radius: 10px; /* Button border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-size);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#send-btn:hover {
+  background-color: #d55773; /* Darker color on hover */
+}
+
+#user-input::placeholder {
+  color: #ffa8bc; /* Placeholder text color */
+}
+
+.suggestion-button {
+  background-color: #ffd6e0; /* Background color for suggestion buttons */
+  color: #333; /* Text color for suggestion buttons */
+  padding: 8px 12px; /* Padding for suggestion buttons */
+  margin: 5px; /* Margin around suggestion buttons */
+  border: none; /* Remove button border */
+  border-radius: 20px; /* Border radius for suggestion buttons */
+  cursor: pointer; /* Cursor style for suggestion buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.suggestion-button:hover {
+  background-color: #ff85a2; /* Background color for suggestion buttons on hover */
+  color: #fff; /* Text color for suggestion buttons on hover */
+}
